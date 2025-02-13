@@ -4,9 +4,8 @@ from app.services.chatgpt_service import ChatGPTService
 from app.models.data_models import Question
 from app.utils.security import verify_token
 from app.utils.logger import logger
-from app.services.data_service import DataService  # Importa a classe DataService
+from app.services.data_service import DataService
 
-# Criar instância do serviço de dados antes de passar para ChatGPTService
 data_service = DataService('2022_2023.xlsx')
 chatgpt_service = ChatGPTService(data_service)
 

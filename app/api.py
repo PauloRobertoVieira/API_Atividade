@@ -1,9 +1,18 @@
 from fastapi import FastAPI
 from app.routes import course, classification, chatgpt, log
 
+
+description = """
+    Construção de API - Pós Graduação Agentes Inteligentes",
+    - /v1/curso/: Retorna dados de um curso
+    - /v1/classifica-curso: Classifica um curso com IA
+    - /v1/pergunta-chatgpt: Faz uma pergunta ao ChatGPT.
+"""
+
+
 app = FastAPI(
     title="Trabalho Disciplina API",
-    description="Construção de API - Pós Graduação Agentes Inteligentes",
+    description=description,
     version="1.0.0",
     terms_of_service="http://example.com/terms/",
     contact={

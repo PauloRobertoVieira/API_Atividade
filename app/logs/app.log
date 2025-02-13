@@ -1,0 +1,35 @@
+2025-02-12 21:07:41,848 - INFO - Started server process [16532]
+2025-02-12 21:07:41,851 - INFO - Waiting for application startup.
+2025-02-12 21:07:41,852 - INFO - Application startup complete.
+2025-02-12 21:07:57,769 - INFO - Curso com ID 15 retornado com sucesso
+2025-02-12 21:08:36,090 - DEBUG - Request options: {'method': 'post', 'url': '/chat/completions', 'files': None, 'json_data': {'messages': [{'role': 'system', 'content': 'Você é um assistente que conhece censo da educação no Brasil, especificamente Censo da UFG planilha 2022_2023.'}, {'role': 'user', 'content': 'Classifique o curso: JORNALISMO'}], 'model': 'gpt-4o-mini', 'max_tokens': 50}}
+2025-02-12 21:08:36,145 - DEBUG - Sending HTTP Request: POST https://api.openai.com/v1/chat/completions
+2025-02-12 21:08:36,146 - DEBUG - connect_tcp.started host='api.openai.com' port=443 local_address=None timeout=5.0 socket_options=None
+2025-02-12 21:08:36,233 - DEBUG - connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001C09D085AC0>
+2025-02-12 21:08:36,234 - DEBUG - start_tls.started ssl_context=<ssl.SSLContext object at 0x000001C09D1535D0> server_hostname='api.openai.com' timeout=5.0
+2025-02-12 21:08:36,265 - DEBUG - start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x000001C09D4F13A0>
+2025-02-12 21:08:36,265 - DEBUG - send_request_headers.started request=<Request [b'POST']>
+2025-02-12 21:08:36,266 - DEBUG - send_request_headers.complete
+2025-02-12 21:08:36,266 - DEBUG - send_request_body.started request=<Request [b'POST']>
+2025-02-12 21:08:36,267 - DEBUG - send_request_body.complete
+2025-02-12 21:08:36,267 - DEBUG - receive_response_headers.started request=<Request [b'POST']>
+2025-02-12 21:08:38,247 - DEBUG - receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Thu, 13 Feb 2025 00:08:38 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'access-control-expose-headers', b'X-Request-ID'), (b'openai-organization', b'user-dhtnzd4aannvcdnlpkajc6qg'), (b'openai-processing-ms', b'1095'), (b'openai-version', b'2020-10-01'), (b'x-ratelimit-limit-requests', b'10000'), (b'x-ratelimit-limit-tokens', b'200000'), (b'x-ratelimit-remaining-requests', b'9999'), (b'x-ratelimit-remaining-tokens', b'199911'), (b'x-ratelimit-reset-requests', b'8.64s'), (b'x-ratelimit-reset-tokens', b'26ms'), (b'x-request-id', b'req_3a52949a5ea4d4ad2215259b684986ca'), (b'strict-transport-security', b'max-age=31536000; includeSubDomains; preload'), (b'cf-cache-status', b'DYNAMIC'), (b'Set-Cookie', b'__cf_bm=wLyDfy69cuqKX9PqIs4rba0W_FElWvNPRfoBaSLs0nQ-1739405318-1.0.1.1-jd3FozynMc8csfTiD2rcxv2oyhbgRv3z6YQH65kTmY1Yg5q.hu0qT0ZLBvAR0mvudnwzAEzjlEyKZJBnZRGjEQ; path=/; expires=Thu, 13-Feb-25 00:38:38 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'X-Content-Type-Options', b'nosniff'), (b'Set-Cookie', b'_cfuvid=UBuR.qASIcjmmB.daO1czFB99PaRpFAp7RoJN5yBeMk-1739405318907-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), (b'Server', b'cloudflare'), (b'CF-RAY', b'911095beed03f1e7-GRU'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2025-02-12 21:08:38,249 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2025-02-12 21:08:38,249 - DEBUG - receive_response_body.started request=<Request [b'POST']>
+2025-02-12 21:08:38,254 - DEBUG - receive_response_body.complete
+2025-02-12 21:08:38,254 - DEBUG - response_closed.started
+2025-02-12 21:08:38,255 - DEBUG - response_closed.complete
+2025-02-12 21:08:38,255 - DEBUG - HTTP Response: POST https://api.openai.com/v1/chat/completions "200 OK" Headers([('date', 'Thu, 13 Feb 2025 00:08:38 GMT'), ('content-type', 'application/json'), ('transfer-encoding', 'chunked'), ('connection', 'keep-alive'), ('access-control-expose-headers', 'X-Request-ID'), ('openai-organization', 'user-dhtnzd4aannvcdnlpkajc6qg'), ('openai-processing-ms', '1095'), ('openai-version', '2020-10-01'), ('x-ratelimit-limit-requests', '10000'), ('x-ratelimit-limit-tokens', '200000'), ('x-ratelimit-remaining-requests', '9999'), ('x-ratelimit-remaining-tokens', '199911'), ('x-ratelimit-reset-requests', '8.64s'), ('x-ratelimit-reset-tokens', '26ms'), ('x-request-id', 'req_3a52949a5ea4d4ad2215259b684986ca'), ('strict-transport-security', 'max-age=31536000; includeSubDomains; preload'), ('cf-cache-status', 'DYNAMIC'), ('set-cookie', '__cf_bm=wLyDfy69cuqKX9PqIs4rba0W_FElWvNPRfoBaSLs0nQ-1739405318-1.0.1.1-jd3FozynMc8csfTiD2rcxv2oyhbgRv3z6YQH65kTmY1Yg5q.hu0qT0ZLBvAR0mvudnwzAEzjlEyKZJBnZRGjEQ; path=/; expires=Thu, 13-Feb-25 00:38:38 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('x-content-type-options', 'nosniff'), ('set-cookie', '_cfuvid=UBuR.qASIcjmmB.daO1czFB99PaRpFAp7RoJN5yBeMk-1739405318907-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None'), ('server', 'cloudflare'), ('cf-ray', '911095beed03f1e7-GRU'), ('content-encoding', 'gzip'), ('alt-svc', 'h3=":443"; ma=86400')])
+2025-02-12 21:08:38,255 - DEBUG - request_id: req_3a52949a5ea4d4ad2215259b684986ca
+2025-02-12 21:08:38,258 - INFO - Curso classificado: O curso de Jornalismo, geralmente, é classificado como um curso de graduação na área de Comunicação Social. Ele forma profissionais capacitados para atuar na produção, edição e divulgação de notícias, reportagens e conteúdos jornalísticos em diversas plataformas, como imp
+2025-02-12 21:09:52,547 - DEBUG - Debug log
+2025-02-12 21:09:52,548 - INFO - Info log
+2025-02-12 21:09:52,548 - WARNING - Warning log
+2025-02-12 21:09:52,549 - ERROR - Error log
+2025-02-12 21:09:52,549 - CRITICAL - Critical log
+2025-02-12 21:11:08,825 - INFO - Shutting down
+2025-02-12 21:11:08,932 - INFO - Waiting for application shutdown.
+2025-02-12 21:11:08,933 - INFO - Application shutdown complete.
+2025-02-12 21:11:08,935 - INFO - Finished server process [16532]
+2025-02-12 21:11:09,036 - DEBUG - close.started
+2025-02-12 21:11:09,036 - DEBUG - close.complete
