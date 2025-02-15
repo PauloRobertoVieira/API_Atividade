@@ -5,7 +5,8 @@ from app.routes import course, classification, chatgpt, log
 description = """
     Construção de API - Pós Graduação Agentes Inteligentes
     
-    - /v1/curso/: Retorna dados de um curso
+    - /v1/curso: Retorna dados de um curso
+    - /v2/curso: Retornas dados de um curso
     - /v1/classifica-curso: Classifica um curso com IA
     - /v1/pergunta-chatgpt: Faz uma pergunta ao ChatGPT.
 """
