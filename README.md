@@ -9,12 +9,26 @@ Este documento fornece um passo a passo para configurar e executar a API.
 - Python 3.10+
 - `pip` instalado
 
+## **Configuração de Variáveis de Ambiente**
+
+Crie um arquivo `.env` e adicione as credenciais conforme o arquivo `.env.sample`:
+
+```env
+OPENAI_API_KEY="sua-chave-aqui"
+```
+
 ## **Criando e Ativando o Ambiente Virtual**
 
+### Windows
+```bash
+python -m venv venv
+venv\Scripts\activate     # Para Windows
+```
+
+### Linux
 ```bash
 python -m venv venv
 source venv/bin/activate  # Para Linux/macOS
-venv\Scripts\activate     # Para Windows
 ```
 
 ## **Instalando Dependências**
@@ -27,15 +41,6 @@ Se `requirements.txt` não existir, crie-o:
 
 ```bash
 pip freeze > requirements.txt
-```
-
-## **Configuração de Variáveis de Ambiente**
-
-Crie um arquivo `.env` e adicione:
-
-```env
-openai_api_key="sua-chave-aqui"
-secret_token="seu-token-seguro"
 ```
 
 ## **Executando a API**
