@@ -12,7 +12,7 @@ description = """
 
 
 app = FastAPI(
-    title="Trabalho Disciplina API",
+    title="Censo da Educação Superior",
     description=description,
     version="1.0.0",
     terms_of_service="https://agentes.inf.ufg.br/",
