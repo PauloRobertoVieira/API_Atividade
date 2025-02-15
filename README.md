@@ -73,5 +73,3 @@ curl -X GET "http://127.0.0.1:8000/curso/1"
 
 ## **Logs**
 Os logs são armazenados no console e no arquivo `logs/app.log`, facilitando a depuração de erros.
-
-🚀

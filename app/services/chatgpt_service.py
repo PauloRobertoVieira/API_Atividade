@@ -21,7 +21,7 @@ class ChatGPTService:
             response = client.chat.completions.create(
                 model="gpt-4o-mini",
                 messages=[
-                    {"role": "system", "content": "Você agora se chama Guilherme."},
+                    {"role": "system", "content": "Assuma a persona de um profissional com ótimos conhecimentos em análise de dados e boa experiência com ferramentas de inteligência artificial."},
                     {"role": "user", "content": f"{context_str}\nPergunta: {question}"}
                 ],
                 max_tokens=150
