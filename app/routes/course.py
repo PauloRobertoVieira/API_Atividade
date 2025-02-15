@@ -9,7 +9,9 @@ router = APIRouter(prefix="/v1")
 security = HTTPBearer()
 data_service = DataService('2022_2023.xlsx')
 
-@router.get("/curso/{course_id}", response_model=CourseData, summary="Busca curso", description="Descrição")
+descricao = "Retorna dados de um curso específico com base no ID informado."
+
+@router.get("/curso/{course_id}", response_model=CourseData, summary="Retorna dados de um curso", description=descricao)
 async def get_course(course_id: int, credentials: HTTPAuthorizationCredentials = Depends(security)):
     verify_token(credentials)
     course = data_service.get_course_data(course_id)

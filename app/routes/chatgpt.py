@@ -12,7 +12,9 @@ chatgpt_service = ChatGPTService(data_service)
 router = APIRouter(prefix="/v1")
 security = HTTPBearer()
 
-@router.post("/pergunta-chatgpt", summary="Pergunta para o chatgpt", description="Descrição")
+descricao = "Faz uma pergunta ao ChatGPT e retorna a resposta."
+
+@router.post("/pergunta-chatgpt", summary="Faz uma pergunta ao ChatGPT.", description=descricao)
 async def ask_chatgpt(question: Question, credentials: HTTPAuthorizationCredentials = Depends(security)):
     verify_token(credentials)
     answer = chatgpt_service.ask_question(question.question)
