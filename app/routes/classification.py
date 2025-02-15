@@ -1,6 +1,7 @@
 from fastapi import APIRouter, Depends, HTTPException
 from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
 from app.services.data_service import DataService
+from app.models.data_models import Tags
 from app.utils.security import verify_token
 from app.utils.logger import logger
 
@@ -10,7 +11,7 @@ data_service = DataService('2022_2023.xlsx')
 
 descricao = "Classifica um curso com IA, considerando a modalidade, grau, ano e quantidade concluintes."
 
-@router.post("/classifica-curso", summary="Classifica um curso com IA", description=descricao)
+@router.post("/classifica-curso", summary="Classifica um curso com IA", description=descricao, tags=[Tags.ia])
 async def classify_course(course_name: str, credentials: HTTPAuthorizationCredentials = Depends(security)):
     verify_token(credentials)
     df = data_service.data

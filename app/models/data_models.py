@@ -1,4 +1,5 @@
 from pydantic import BaseModel
+from enum import Enum
 
 
 class CourseData(BaseModel):
@@ -12,3 +13,8 @@ class CourseData(BaseModel):
 
 class Question(BaseModel):
     question: str
+
+class Tags(str, Enum):
+    curso = "Busca cursos"
+    ia = "Implementação com IA"
+    logs = "Logs"

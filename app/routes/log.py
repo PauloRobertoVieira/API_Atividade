@@ -1,9 +1,10 @@
 from fastapi import APIRouter
 from app.utils.logger import logger
+from app.models.data_models import Tags
 
 router = APIRouter()
 
-@router.get("/log", summary="Logs da API")
+@router.get("/log", summary="Logs da API", tags=[Tags.logs])
 async def log_check():
     logger.debug("Debug log")
     logger.info("Info log")
