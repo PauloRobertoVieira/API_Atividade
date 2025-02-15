@@ -3,7 +3,7 @@ from app.utils.logger import logger
 
 router = APIRouter()
 
-@router.get("/log")
+@router.get("/log", summary="Logs da API")
 async def log_check():
     logger.debug("Debug log")
     logger.info("Info log")

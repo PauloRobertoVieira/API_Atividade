@@ -7,11 +7,10 @@ client = openai.OpenAI(api_key=settings.openai_api_key)
 
 class ChatGPTService:
     def __init__(self, data_service):
-        self.data_service = data_service  # Passando o serviço de dados
+        self.data_service = data_service
 
     def ask_question(self, question):
         try:
-            # Primeiro, tenta obter dados relevantes do arquivo
             data_context = self.process_question(question)
 
             if data_context:
@@ -19,7 +18,6 @@ class ChatGPTService:
             else:
                 context_str = "Não encontrei informações específicas no arquivo. Responda com base no seu conhecimento geral."
 
-            # Envia ao ChatGPT
             response = client.chat.completions.create(
                 model="gpt-4o-mini",
                 messages=[
@@ -45,7 +43,7 @@ class ChatGPTService:
                 if not max_curso.empty:
                     return f"O curso com maior quantidade de candidatos novos em 2022 foi {max_curso.iloc[0]['CURSO']} com {max_curso.iloc[0]['CANDIDATOS NOVOS']} candidatos."
                 
-            return None  # Caso não encontre correspondência direta
+            return None
         except Exception as e:
             logger.error(f"Erro ao processar a pergunta: {e}")
             return None

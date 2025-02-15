@@ -8,7 +8,7 @@ router = APIRouter(prefix="/v1")
 security = HTTPBearer()
 ai_service = AIService()
 
-@router.post("/classifica-curso")
+@router.post("/classifica-curso", summary="Classifica curso", description="Descrição")
 async def classify_course(description: str, credentials: HTTPAuthorizationCredentials = Depends(security)):
     verify_token(credentials)
     classification = ai_service.classify_course(description)
