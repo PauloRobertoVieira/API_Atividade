@@ -65,7 +65,25 @@ A API estará disponível em `http://127.0.0.1:8000`
 
 ## **Testando a API**
 
-Após iniciar a API, você pode testar os endpoints via Postman ou usando `curl`:
+Após iniciar a API, você pode testar os endpoints:
+
+### **1. Usando a Documentação Interativa (Swagger UI)**
+Acesse a documentação interativa no navegador:
+- **Swagger UI**: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
+- **Redoc**: [http://127.0.0.1:8000/redoc](http://127.0.0.1:8000/redoc)
+
+### **2. Usando o Postman**
+Você pode importar a coleção do Postman para testar os endpoints. Siga os passos abaixo:
+
+1. Abra o Postman.
+2. Clique em **Import** e cole o link abaixo:
+   ```
+   http://127.0.0.1:8000/docs
+   ```
+3. Selecione os endpoints que deseja testar e envie as requisições.
+
+### **3. Usando `curl` (via terminal)**
+Você também pode testar os endpoints diretamente pelo terminal. Por exemplo:
 
 ```bash
 curl -X GET "http://127.0.0.1:8000/curso/1"
